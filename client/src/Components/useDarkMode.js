@@ -3,9 +3,8 @@ import useLocalStorage from './localStorage'
 
 
 const useDarkMode = () => {
-    return(
-        
-    );
-};
+    const [values, setValues] = useLocalStorage("darkMode");
+    useEffect(()=> {
+}
 
-export default useDarkMode;
+export default useDarkMode
