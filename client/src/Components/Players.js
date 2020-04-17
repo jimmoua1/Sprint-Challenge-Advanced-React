@@ -1,10 +1,26 @@
 import React from 'react';
 import axios from 'axios';
 
-const Players = () => {
-    return (
-        
-    );
-  };
+export class Player extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      players: [],
+    }
+  }
 
-export default Players;
+  componentDidMount() {
+    axios
+      .get(`http://localhost:5000/api/players`)
+      .then(res => {
+        this.setState({
+          players: res.data
+
+        })
+      })
+  }
+  render() {
+    return (
+    )
+  }
+} 
